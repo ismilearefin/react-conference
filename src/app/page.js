@@ -1,9 +1,9 @@
-
+import HeroSection from "@/components/heroSection/HeroSection";
 
 export default function Home() {
   return (
-    <main className="w-full text-center">
-      <h1>React Conferense</h1>
+    <main className="">
+      <HeroSection></HeroSection>
     </main>
-  )
+  );
 }
