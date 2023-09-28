@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="w-full grid justify-center">
          <HeroBackground></HeroBackground>
-          <div className="w-[1922px] border">
+          <div className="lg:w-[1922px] border">
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
