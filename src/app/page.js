@@ -1,4 +1,4 @@
-import Sponsor from "@/components/Sponsor";
+import Sponsor from "@/components/sponsor/Sponsor";
 import Conferance from "@/components/conference/Conferance";
 import HeroSection from "@/components/heroSection/HeroSection";
 
