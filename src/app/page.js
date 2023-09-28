@@ -5,7 +5,7 @@ import HeroSection from "@/components/heroSection/HeroSection";
 export default function Home() {
   return (
     <main className="w-full relative">
-      <HeroSection></HeroSection>
+      {/* <HeroSection></HeroSection> */}
       <Conferance></Conferance>
       <Sponsor></Sponsor>
     </main>
