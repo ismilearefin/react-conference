@@ -2,7 +2,7 @@
 export default function HeroBackground() {
   return (
     <div className="absolute w-full">
-    <svg className="w-full" width="1920" height="1588" viewBox="0 0 1920 1588" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="w-full" width="1920" height="1088" viewBox="0 0 1920 1588" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_f_4303_462)">
 <circle cx="129" cy="129" r="129" transform="matrix(1 0 0 -1 1521 1088)" fill="#FFC93E"/>
 </g>

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <div className="pt-4 mx-[200px] flex">
-      <Image className="absolute right-[190px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
+      <Image className="absolute right-[140px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
       
       <div className="basis-4/5 relative">
         <div className="relative text-end text-[#111D5E] text-[140px] font-bold leading-none">
@@ -20,7 +20,7 @@ export default function HeroSection() {
           <Image  src='/HeroImage2.png' alt="Hero Image 2" width={330} height={420}></Image>
         </div>
         <div className="basis-3/5 ml-16">
-          <div>
+          <Link href='/'>
             <p className="font-normal text-lg text-black h-[118px] ">
             Lorem uis diam turpis quam id fermentum.In quis diam turpis quam id fermentum..id fermentum.In quis diam turpis quam id fermentum.
             </p>
@@ -28,9 +28,9 @@ export default function HeroSection() {
             <p className="py-[16px] px-2">Buy Tickets</p>
             <Image src='/arrow-up-right.svg' alt="icon" width={20} height={20}/>
             </div>
-            </div>
+            </Link>
           <div className="relative min-h-full">
-            <div className="absolute right-0 bottom-[250px] flex gap-2 flex-row-reverse origin-center -rotate-90">
+            <div className="absolute right-[100px] bottom-[300px] flex gap-2 flex-row-reverse origin-center -rotate-90">
             <p className="text-[#0A142F] text-sm font-normal">
             Scroll Down
             </p>
