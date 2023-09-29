@@ -8,7 +8,10 @@ import client from '../../graphQL/apollo';
 
 export default function Conferance() {
 
-  const { loading, error, data } = useQuery(GET_DATA, { client });
+  const { loading, error, data } = useQuery(GET_DATA, {
+    client,
+    nextFetchPolicy:'cache-first'
+   });
   
   if (loading) return 'Loading...';
   if (error) return `Error: ${error.message}`;

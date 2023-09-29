@@ -11,7 +11,7 @@ export default function HeroSection() {
       
       <div className="basis-4/5 relative">
         <div className="relative text-end text-[#111D5E] text-[140px] font-bold leading-none">
-          <Image className="absolute  right-[330px] top-[-30px]" src='/reactStar.svg' alt="react star" width={85} height={85}></Image>
+          <Image className="absolute  right-[330px] top-[-40px]" src='/reactStar.svg' alt="react star" width={85} height={85}></Image>
           <h1>React <br/>Conference</h1>
         </div>
         <div className="flex mt-9">

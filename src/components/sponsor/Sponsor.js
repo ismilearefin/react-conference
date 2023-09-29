@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Sponsor() {
   return (
-    <div className="lg:py-[100px] lg:px-[300px] bg-[#F9FAFB] flex justify-center items-center">
+    <div className="py-14 lg:py-[100px] lg:px-[300px] bg-[#F9FAFB] flex justify-center items-center">
         <div>
             <h1 className="text-[#0A142F] text-5xl font-bold text-center pb-[32px]" >Our Sponsor</h1>
             <div className="pb-[32px]">

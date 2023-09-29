@@ -8,7 +8,8 @@ export default function Navbar() {
     
     const style = {
         width:'117',
-        height:'32'
+        height:'32',
+        color:'#111D5E'
     }
 
   return (
