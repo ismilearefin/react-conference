@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-import HeroBackground from "@/components/svgs/HeroBackground";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full grid justify-center">
-         <HeroBackground></HeroBackground>
-          <div className="lg:w-[1922px] border">
+        <div className="w-full bg-hero-bg bg-auto lg:bg-cover lg:bg-center bg-no-repeat">
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
-          </div>
         </div>
       </body>
     </html>

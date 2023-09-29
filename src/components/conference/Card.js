@@ -10,8 +10,9 @@ export default function Card({conferance,index}) {
   
   return (
     <div className="flex gap-4 lg:grid lg:grid-cols-11 w-full lg:w-[1088px]  group">
+     
       {/* Card design */}
-      <div  className={`order-2 w-full ${index%2 ? 'lg:order-3' : 'lg:order-1'} lg:col-span-5 bg-[#F9FAFB] py-[18px] px-[12px] lg:w-[480px] h-[104px] rounded-lg shadow-3xl relative`}>
+      <div  className={`order-2 w-full ${index%2 ? 'lg:order-3' : 'lg:order-1'} lg:col-span-5 bg-[#F9FAFB] py-[18px] px-[12px] w-[260px] lg:w-[480px] h-[104px] rounded-lg shadow-3xl relative`}>
         <div className=" before:absolute before:inset-0 before:content-[''] before:w-full before:h-[4px] before:bg-[#CDCDCD] before:rounded-t-lg">
           <div className="flex gap-2 ">
             <Image src="/Marker.svg" alt="Marker" width={16} height={16} />
@@ -24,7 +25,7 @@ export default function Card({conferance,index}) {
           </p>
         </div>
       </div>
-
+     
       {/* Icon and Line */}
       <div className="order-1 lg:order-2 grid justify-center justify-items-center">
       <Image

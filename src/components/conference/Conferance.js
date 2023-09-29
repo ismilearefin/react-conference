@@ -20,8 +20,8 @@ export default function Conferance() {
 
 
   return (
-    <div className=' py-[100px] w-full'>
-        <p className='text-center text-5xl font-bold py-10'>Conferences</p>
+    <div className='Pt-[45px] pb-[100px] lg:py-[100px] w-full'>
+        <p className='text-center text-2xl lg:text-5xl font-bold py-10'>Conferences</p>
     <div className='flex justify-center items-center '>
     <div>
       {

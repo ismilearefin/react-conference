@@ -6,31 +6,32 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="pt-4 mx-[200px] flex">
-      <Image className="absolute right-[140px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
-      
-      <div className="basis-4/5 relative">
-        <div className="relative text-end text-[#111D5E] text-[140px] font-bold leading-none">
-          <Image className="absolute  right-[330px] top-[-40px]" src='/reactStar.svg' alt="react star" width={85} height={85}></Image>
+    <div className=' flex justify-center'>
+    <div className="w-full relative lg:w-[1552px] lg:pt-4 mx-[20px] lg:mx-[200px] lg:flex">
+      <div className="lg:basis-3/5 relative">
+        <div className="relative mr-14 lg:mr-0 text-end text-[#111D5E] text-[48px] lg:text-[140px] font-bold leading-none">
+          <Image className="absolute right-[110px] top-[-20px] w-[40px] lg:w-[85px] lg:right-[330px] lg:top-[-40px]" src='/reactStar.svg' alt="react star" width={85} height={85}></Image>
           <h1>React <br/>Conference</h1>
         </div>
         <div className="flex mt-9">
-        <div className="relative z-0 basis-2/5">
+        {/* hero image 2 */}
+        <div className="hidden lg:block relative z-0 basis-2/5">
           <Image className="absolute -z-[10] left-[220px] bottom-[-100px]" src='/Ornament.svg' alt="Ornament" width={196} height={189}/>
           <Image  src='/HeroImage2.png' alt="Hero Image 2" width={330} height={420}></Image>
         </div>
-        <div className="basis-3/5 ml-16">
+        
+        <div className="w-full lg:basis-3/5 lg:ml-16">
           <Link href='/'>
-            <p className="font-normal text-lg text-black h-[118px] ">
+            <p className="font-normal text-base lg:text-lg text-black pb-7 lg:h-[118px] ">
             Lorem uis diam turpis quam id fermentum.In quis diam turpis quam id fermentum..id fermentum.In quis diam turpis quam id fermentum.
             </p>
-            <div className=" w-[293px] mt-6  bg-[#FFC93E] rounded-[30px] flex justify-center text-[#0A142F] text-lg font-medium">
+            <div className=" lg:w-[293px] mt-2 lg:mt-6  bg-[#FFC93E] rounded-[30px] flex justify-center text-[#0A142F] text-lg font-medium">
             <p className="py-[16px] px-2">Buy Tickets</p>
             <Image src='/arrow-up-right.svg' alt="icon" width={20} height={20}/>
             </div>
             </Link>
           <div className="relative min-h-full">
-            <div className="absolute right-[100px] bottom-[300px] flex gap-2 flex-row-reverse origin-center -rotate-90">
+            <div className="hidden absolute right-[100px] bottom-[300px] lg:flex gap-2 flex-row-reverse origin-center -rotate-90">
             <p className="text-[#0A142F] text-sm font-normal">
             Scroll Down
             </p>
@@ -40,12 +41,19 @@ export default function HeroSection() {
         </div>
       </div>
       </div>
+      <Image className="absolute  top-9 lg:top-0  right-[-5px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
 
-      <div className="basis-1/5 ml-9 relative">
-      <Image className="rounded-[50px] max-w-[550px] pt-[145px]" src='/HeroImage.png' alt="Hero Image" width={550} height={550}></Image>
-      <Image className="absolute bottom-[-10px] left-[-40px] " src='/Star.svg' alt="star" width={100} height={100}></Image>
+      <div className="lg:basis-2/5 ml-2 lg:ml-9 relative">
+      <Image className="rounded-[50px] w-[330px] lg:w-[550px] pt-8 lg:pt-[145px]" src='/HeroImage.png' alt="Hero Image" width={550} height={550}></Image>
+      <Image className="absolute bottom-[-40px] right-[-20px] lg:bottom-[-10px] lg:left-[-40px] " src='/Star.svg' alt="star" width={100} height={100}></Image>
       </div>
+
+      <div className="lg:hidden w-full flex flex-row-reverse justify-between mt-[64px]">
+          <Image className="mt-[100px]" src='/Ornament.svg' alt="Ornament" width={100} height={100}/>
+          <Image  src='/HeroImage2.png' alt="Hero Image 2" width={157} height={200}></Image>
+        </div>
         
+    </div>
     </div>
   )
 }
