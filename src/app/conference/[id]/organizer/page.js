@@ -2,7 +2,7 @@
 import { dataQueries } from '@/graphQL/queries';
 import { useQuery } from '@apollo/client';
 import client from '../../../../graphQL/apollo';
-import OrgranizerCard from '@/components/orgranizerCard/OrgranizerCard';
+import DetailCard from '@/components/detailCard/DetailCard';
 
 export default function Orgranizer({params}) {
     const id = params.id;
@@ -12,14 +12,13 @@ export default function Orgranizer({params}) {
     });
     if (loading) return "Loading...";
     if (error) return `Error: ${error.message}`;
-    console.log(data.conference.organizers)
+    
     const organizers = data.conference.organizers
   return (
     <div>
       {
-        organizers.map((organizer,i) =><OrgranizerCard key={i} organizer={organizer}></OrgranizerCard>)
+        organizers.map((organizer,i) =><DetailCard key={i} organizer={organizer}></DetailCard>)
       }
-    {/* <OrgranizerCard></OrgranizerCard> */}
     </div>
   )
 }
