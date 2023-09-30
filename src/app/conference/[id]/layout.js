@@ -1,0 +1,40 @@
+"use client";
+import { dataQueries } from "@/graphQL/queries";
+import { useQuery } from "@apollo/client";
+import client from "../../../graphQL/apollo";
+import Button from "@/components/Button";
+
+export default function ConferanceLayout({ children, params }) {
+  const id = params.id;
+  const { loading, error, data } = useQuery(dataQueries.GET_CONFERENCE_BY_ID, {
+    client,
+    variables: { id },
+  });
+  if (loading) return "Loading...";
+  if (error) return `Error: ${error.message}`;
+
+  const menu = ["organizer", "schedule", "speakers", "sponsors"];
+  //   console.log(data)
+  return (
+    <div className="flex w-full justify-center">
+      <div className="w-full lg:w-[1320px] border">
+        <div>
+          <h1 className="text-5xl font-bold text-[#0A142F] pb-2">
+            {data.conference.name}
+          </h1>
+          <p className="text-[#0A142F] text-xl font-normal opacity-80">
+            {data.conference.slogan}c
+          </p>
+        </div>
+        <div className="flex gap-x-8">
+          <aside className="border shadow-3xl p-4">
+            {menu.map((item, i) => (
+              <Button id={id} name={item} key={i}></Button>
+            ))}
+          </aside>
+          <div>{children}</div>
+        </div>
+      </div>
+    </div>
+  );
+}

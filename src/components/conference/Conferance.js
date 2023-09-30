@@ -1,6 +1,6 @@
 'use client'
 
-import { GET_DATA } from '@/graphQL/queries';
+import {dataQueries} from '@/graphQL/queries';
 import Card from './Card';
 import { useQuery } from '@apollo/client';
 import client from '../../graphQL/apollo';
@@ -8,7 +8,7 @@ import client from '../../graphQL/apollo';
 
 export default function Conferance() {
 
-  const { loading, error, data } = useQuery(GET_DATA, {
+  const { loading, error, data } = useQuery(dataQueries.GET_CONFERENCES_DATA, {
     client,
     nextFetchPolicy:'cache-first'
    });
