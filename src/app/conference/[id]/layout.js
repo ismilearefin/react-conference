@@ -17,8 +17,8 @@ export default function ConferanceLayout({ children, params }) {
   //   console.log(data)
   return (
     <div className="flex w-full justify-center">
-      <div className="w-full lg:w-[1320px] border">
-        <div>
+      <div className="w-full lg:w-[1320px]">
+        <div className="pb-[52px]">
           <h1 className="text-5xl font-bold text-[#0A142F] pb-2">
             {data.conference.name}
           </h1>
@@ -27,12 +27,12 @@ export default function ConferanceLayout({ children, params }) {
           </p>
         </div>
         <div className="flex gap-x-8">
-          <aside className="border shadow-3xl p-4">
+          <aside className="border shadow-3xl p-4 h-fit">
             {menu.map((item, i) => (
               <Button id={id} name={item} key={i}></Button>
             ))}
           </aside>
-          <div>{children}</div>
+          <div className="overflow-y-scroll scroll-m-1 border w-full h-[670px] rounded-lg mb-[100px] bg-[#F9FAFB]">{children}</div>
         </div>
       </div>
     </div>
