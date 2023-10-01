@@ -60,6 +60,19 @@ query GetConferenceById($id: ID!) {
   }
 }
 `;
+const GET_SCHEDULE_BY_ID = gql`
+query GetConferenceById($id: ID!) {
+  conference(id: $id) {
+    schedules {
+      day
+      intervals {
+        begin
+        end
+      }
+    }
+  }
+}
+`;
 
 
 export const dataQueries = {
@@ -67,5 +80,6 @@ export const dataQueries = {
   GET_CONFERENCE_BY_ID,
   GET_ORGRANIZER_BY_ID,
   GET_SPEAKERS_BY_ID,
-  GET_SPONSOR_BY_ID
+  GET_SPONSOR_BY_ID,
+  GET_SCHEDULE_BY_ID
 }

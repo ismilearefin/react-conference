@@ -16,7 +16,7 @@ export default function Sponsors({params}) {
     console.log(data)
     const sponsors = data.conference.sponsors
   return (
-    <div>
+    <div className='grid gap-y-6 mx-[52px] py-[24px]'>
       {
         sponsors.map((organizer,i) => <DetailCard key={i} organizer={organizer}></DetailCard>)
       }

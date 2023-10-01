@@ -1,7 +1,7 @@
 
 
-export default function page() {
+export default function page({children}) {
   return (
-    <div className="">page</div>
+    <div className="">{children}</div>
   )
 }

@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
 export default function Card({conferance,index}) {
+  
   
   const {name, slogan,startDate,id} = conferance;
   
@@ -13,7 +15,7 @@ export default function Card({conferance,index}) {
     <div className="flex gap-4 lg:grid lg:grid-cols-11 w-full lg:w-[1088px]  group">
      
       {/* Card design */}
-      <Link href={`/conference/${id}`}  className={`order-2 w-full ${index%2 ? 'lg:order-3' : 'lg:order-1'} lg:col-span-5 bg-[#F9FAFB] py-[18px] px-[12px] w-[260px] lg:w-[480px] h-[104px] rounded-lg shadow-3xl relative`}>
+      <Link href={`/conference/${id}/organizer`}  className={`order-2 w-full ${index%2 ? 'lg:order-3' : 'lg:order-1'} lg:col-span-5 bg-[#F9FAFB] py-[18px] px-[12px] w-[260px] lg:w-[480px] h-[104px] rounded-lg shadow-3xl relative`}>
         <div className=" before:absolute before:inset-0 before:content-[''] before:w-full before:h-[4px] before:bg-[#CDCDCD] before:rounded-t-lg">
           <div className="flex gap-2 ">
             <Image src="/Marker.svg" alt="Marker" width={16} height={16} />
