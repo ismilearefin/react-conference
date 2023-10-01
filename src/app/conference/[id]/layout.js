@@ -34,8 +34,8 @@ export default function ConferanceLayout({ children, params }) {
             {data.conference.slogan}c
           </p>
         </div>
-        <div className="flex justify-center  lg:gap-x-8">
-          <aside className=" lg:static border shadow-3xl p-2 lg:p-4 h-fit">
+        <div className="lg:flex justify-center  lg:gap-x-8">
+          <aside className="   border shadow-3xl p-2 lg:p-4 h-fit">
             {menu.map((item, i) => (
               <>
               <Button key={i} id={id} name={item}  path={pathname}></Button>

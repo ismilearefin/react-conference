@@ -17,7 +17,7 @@ export default function Speakers({params}) {
     console.log(data)
     const speakers = data.conference.speakers
   return (
-    <div className='grid gap-y-3 lg:gap-y-6 mx-[52px] py-[24px]'>
+    <div className='grid gap-y-3 lg:gap-y-6 lg:mx-[52px] py-[24px]'>
       {
         speakers.map((organizer,i) => <DetailCard key={i} organizer={organizer}></DetailCard>)
       }

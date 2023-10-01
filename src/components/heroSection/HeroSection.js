@@ -1,10 +1,14 @@
-
+'use client'
 
 import Image from "next/image";
 import Link from "next/link";
 
 
+
 export default function HeroSection() {
+
+  
+
   return (
     <div className=' flex justify-center'>
     <div className="w-full relative lg:w-[1552px] lg:pt-4 mx-[20px] lg:mx-[200px] lg:flex">

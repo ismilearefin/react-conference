@@ -7,8 +7,9 @@ import client from '../../graphQL/apollo';
 import Loading from '../loading/Loading';
 
 
-export default function Conferance() {
 
+export default function Conferance() {
+  
   const { loading, error, data } = useQuery(dataQueries.GET_CONFERENCES_DATA, {
     client,
     nextFetchPolicy:'cache-first'

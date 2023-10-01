@@ -17,7 +17,7 @@ export default function Schedule({params}) {
     const schedules = data.conference.schedules
     
   return (
-    <div className='grid gap-y-3 lg:gap-y-6 mx-[52px] py-[24px]'>
+    <div className='grid gap-y-3 lg:gap-y-6 lg:mx-[52px] py-[24px]'>
       {
         schedules.map((organizer,i) => <ScheduleCard organizer={organizer} key={i}></ScheduleCard>)
       }
