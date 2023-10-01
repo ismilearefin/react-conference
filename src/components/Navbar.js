@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <div className='w-full flex justify-center items-center  '>
         <div className='w-full lg:w-[1320px] px-5 flex justify-between py-10 lg:py-12  '>
-        <Logo style={style}></Logo>
+        <Link href='/'><Logo style={style}></Logo></Link>
         <div className='hidden lg:flex lg:min-w-[40rem] justify-between text-lg font-medium'>
             <Link href='/'>About us</Link>
             <Link href='/'>What We do</Link>

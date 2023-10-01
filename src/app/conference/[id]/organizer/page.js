@@ -17,7 +17,7 @@ export default function Orgranizer({params}) {
     
     const organizers = data.conference.organizers
   return (
-    <div className='grid gap-y-6 mx-[52px] py-[24px]'>
+    <div className='grid gap-y-3 lg:gap-y-6 lg:mx-[52px] py-[24px]'>
       {
         organizers.map((organizer,i) =><DetailCard key={i} organizer={organizer}></DetailCard>)
       }

@@ -20,27 +20,35 @@ export default function ConferanceLayout({ children, params }) {
   });
   if (loading) return (<Loading></Loading>);
   if (error) return `Error: ${error.message}`;
+  
 
   const menu = ["organizer", "schedule", "speakers", "sponsors"];
-  
   return (
     <div className="flex w-full justify-center">
       <div className="w-full lg:w-[1320px]">
-        <div className="pb-[52px]">
-          <h1 className="text-5xl font-bold text-[#0A142F] pb-2">
+        <div className="pb-[24px] lg:pb-[52px] ml-4">
+          <h1 className="text-2xl lg:text-5xl font-bold text-[#0A142F]  pb-2">
             {data.conference.name}
           </h1>
-          <p className="text-[#0A142F] text-xl font-normal opacity-80">
+          <p className="text-[#0A142F] text-base lg:text-xl font-normal opacity-80">
             {data.conference.slogan}c
           </p>
         </div>
-        <div className="flex gap-x-8">
-          <aside className="border shadow-3xl p-4 h-fit">
+        <div className="flex justify-center  lg:gap-x-8">
+          <aside className=" lg:static border shadow-3xl p-2 lg:p-4 h-fit">
             {menu.map((item, i) => (
-              <Button id={id} name={item} key={i} path={pathname}></Button>
-            ))}
+              <>
+              <Button key={i} id={id} name={item}  path={pathname}></Button>
+              {
+                pathname === `/conference/${id}/${item}` &&
+                <div className="lg:hidden overflow-y-scroll scroll-m-1 border w-full h-[350px] lg:h-[670px] rounded-lg mb-4 lg:mb-[100px] bg-[#F9FAFB]">{children}</div>
+                
+              }
+              </>
+              ))}
           </aside>
-          <div className="overflow-y-scroll scroll-m-1 border w-full h-[670px] rounded-lg mb-[100px] bg-[#F9FAFB]">{children}</div>
+              
+          <div className="hidden lg:static lg:block overflow-y-scroll scroll-m-1 border w-full h-[250px] lg:h-[670px] rounded-lg mb-[100px] bg-[#F9FAFB]">{children}</div>
         </div>
       </div>
     </div>
