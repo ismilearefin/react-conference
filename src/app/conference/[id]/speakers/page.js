@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import client from '../../../../graphQL/apollo';
 import React from 'react'
 import DetailCard from '@/components/detailCard/DetailCard';
+import CardLoading from '@/components/loading/CardLoading';
 
 export default function Speakers({params}) {
   const id = params.id;
@@ -11,7 +12,7 @@ export default function Speakers({params}) {
       client,
       variables: { id },
     });
-    if (loading) return "Loading...";
+    if (loading) return (<CardLoading></CardLoading>);
     if (error) return `Error: ${error.message}`;
     console.log(data)
     const speakers = data.conference.speakers

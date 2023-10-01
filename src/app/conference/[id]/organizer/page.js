@@ -4,13 +4,15 @@ import { useQuery } from '@apollo/client';
 import client from '../../../../graphQL/apollo';
 import DetailCard from '@/components/detailCard/DetailCard';
 
+import CardLoading from '@/components/loading/CardLoading';
+
 export default function Orgranizer({params}) {
     const id = params.id;
     const { loading, error, data } = useQuery(dataQueries.GET_ORGRANIZER_BY_ID, {
       client,
       variables: { id },
     });
-    if (loading) return "Loading...";
+    if (loading) return (<CardLoading></CardLoading>);
     if (error) return `Error: ${error.message}`;
     
     const organizers = data.conference.organizers

@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import client from "../../../graphQL/apollo";
 import Button from "@/components/Button";
 import { usePathname } from 'next/navigation'
+import Loading from "@/components/loading/Loading";
 
 
 
@@ -17,7 +18,7 @@ export default function ConferanceLayout({ children, params }) {
     client,
     variables: { id },
   });
-  if (loading) return 'loading...'
+  if (loading) return (<Loading></Loading>);
   if (error) return `Error: ${error.message}`;
 
   const menu = ["organizer", "schedule", "speakers", "sponsors"];

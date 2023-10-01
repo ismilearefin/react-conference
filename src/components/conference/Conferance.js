@@ -4,6 +4,7 @@ import {dataQueries} from '@/graphQL/queries';
 import Card from './Card';
 import { useQuery } from '@apollo/client';
 import client from '../../graphQL/apollo';
+import Loading from '../loading/Loading';
 
 
 export default function Conferance() {
@@ -13,7 +14,7 @@ export default function Conferance() {
     nextFetchPolicy:'cache-first'
    });
   
-  if (loading) return 'Loading...';
+  if (loading) return (<Loading></Loading>);
   if (error) return `Error: ${error.message}`;
 
   const conferences = data?.conferences.slice(0,5)

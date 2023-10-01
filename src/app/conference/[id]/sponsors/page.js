@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import client from '../../../../graphQL/apollo';
 import React from 'react'
 import DetailCard from '@/components/detailCard/DetailCard';
+import CardLoading from '@/components/loading/CardLoading';
 
 export default function Sponsors({params}) {
   const id = params.id;
@@ -11,9 +12,9 @@ export default function Sponsors({params}) {
       client,
       variables: { id },
     });
-    if (loading) return "Loading...";
+    if (loading) return (<CardLoading></CardLoading>);
     if (error) return `Error: ${error.message}`;
-    console.log(data)
+    
     const sponsors = data.conference.sponsors
   return (
     <div className='grid gap-y-6 mx-[52px] py-[24px]'>
