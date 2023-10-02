@@ -8,7 +8,8 @@ import Loading from '../loading/Loading';
 
 
 
-export default function Conferance() {
+
+export default function Conferance({conferenceSectionRef}) {
   
   const { loading, error, data } = useQuery(dataQueries.GET_CONFERENCES_DATA, {
     client,
@@ -22,9 +23,9 @@ export default function Conferance() {
 
 
   return (
-    <div className='Pt-[45px] pb-[100px] lg:py-[100px] w-full'>
-        <p className='text-center text-2xl lg:text-5xl font-bold py-10'>Conferences</p>
-    <div className='flex justify-center items-center '>
+    <div  className='Pt-[45px] pb-[100px] lg:py-[100px] w-full'>
+        <p ref={conferenceSectionRef} className='text-center text-2xl lg:text-5xl font-bold py-10'>Conferences</p>
+    <div className='flex justify-center items-center'>
     <div>
       {
         conferences && conferences.map((conferance,i) => <Card key={conferance.id} conferance={conferance} index={i}></Card>  )
