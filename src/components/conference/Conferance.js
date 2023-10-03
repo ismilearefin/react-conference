@@ -16,9 +16,12 @@ export default function Conferance({conferenceSectionRef}) {
     nextFetchPolicy:'cache-first'
    });
   
+  // Handle loading state
   if (loading) return (<Loading></Loading>);
-  if (error) return `Error: ${error.message}`;
+  // Handle error state with a user-friendly message
+  if (error) return <div>Error loading data. Please try again later.</div>;
 
+  
   const conferences = data?.conferences.slice(0,5)
 
 

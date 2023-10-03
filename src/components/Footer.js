@@ -3,6 +3,7 @@ import Logo from "./svgs/Logo";
 
 
 export default function Footer() {
+  // Add logo style
   const style = {
     width:'175',
     height:'48',

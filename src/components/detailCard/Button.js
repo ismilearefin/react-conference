@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Button({ id, name,path }) {
   
   return (
-    
+    //Active button design pattern
     <Link
       className={`${path === `/conference/${id}/${name}` ? 'bg-[#FFC93E] relative lg:static' : 'bg-white'}   hover:bg-[#FFC93E] transition-colors flex items-center border gap-x-11 w-full lg:w-[365px] rounded-lg p-2 my-4`}
       href={`/conference/${id}/${name}`}

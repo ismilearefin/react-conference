@@ -7,8 +7,9 @@ import Link from 'next/link'
 
 
 export default function Navbar() {
+  // useState for burger button 
   const [open,setOpen] = useState(false)
-    
+    //add logo style
     const style = {
         width:'117',
         height:'32',

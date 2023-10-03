@@ -12,14 +12,17 @@ export default function Schedule({params}) {
       client,
       variables: { id },
     });
+    // Handle loading state
     if (loading) return (<CardLoading></CardLoading>);
-    if (error) return `Error: ${error.message}`;
-    const schedules = data.conference.schedules
+     // Handle error state with a user-friendly message
+     if (error) return <div>Error loading data. Please try again later.</div>;
+    
+     const schedules = data.conference.schedules
     
   return (
     <div className='grid gap-y-3 lg:gap-y-6 lg:mx-[52px] py-[24px]'>
       {
-        schedules.map((organizer,i) => <ScheduleCard organizer={organizer} key={i}></ScheduleCard>)
+        schedules.map((detailsData,i) => <ScheduleCard detailsData={detailsData} key={i}></ScheduleCard>)
       }
     </div>
   )

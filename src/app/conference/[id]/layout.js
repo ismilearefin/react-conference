@@ -2,7 +2,7 @@
 import { dataQueries } from "@/graphQL/queries";
 import { useQuery } from "@apollo/client";
 import client from "../../../graphQL/apollo";
-import Button from "@/components/Button";
+import Button from "@/components/detailCard/Button";
 import { usePathname } from 'next/navigation'
 import Loading from "@/components/loading/Loading";
 
@@ -18,8 +18,10 @@ export default function ConferanceLayout({ children, params }) {
     client,
     variables: { id },
   });
+  // Handle loading state
   if (loading) return (<Loading></Loading>);
-  if (error) return `Error: ${error.message}`;
+  // Handle error state with a user-friendly message
+  if (error) return <div>Error loading data. Please try again later.</div>;
   
 
   const menu = ["organizer", "schedule", "speakers", "sponsors"];

@@ -3,7 +3,6 @@ import { dataQueries } from '@/graphQL/queries';
 import { useQuery } from '@apollo/client';
 import client from '../../../../graphQL/apollo';
 import DetailCard from '@/components/detailCard/DetailCard';
-
 import CardLoading from '@/components/loading/CardLoading';
 
 export default function Orgranizer({params}) {
@@ -12,14 +11,16 @@ export default function Orgranizer({params}) {
       client,
       variables: { id },
     });
+    // Handle loading state
     if (loading) return (<CardLoading></CardLoading>);
-    if (error) return `Error: ${error.message}`;
+    // Handle error state with a user-friendly message
+    if (error) return <div>Error loading data. Please try again later.</div>;
     
     const organizers = data.conference.organizers
   return (
     <div className='grid gap-y-3 lg:gap-y-6 lg:mx-[52px] py-[24px]'>
       {
-        organizers.map((organizer,i) =><DetailCard key={i} organizer={organizer}></DetailCard>)
+        organizers.map((detailsData,i) =><DetailCard key={i} detailsData={detailsData}></DetailCard>)
       }
     </div>
   )

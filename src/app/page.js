@@ -3,6 +3,7 @@ import Sponsor from "@/components/sponsor/Sponsor";
 import Conferance from "@/components/conference/Conferance";
 import HeroSection from "@/components/heroSection/HeroSection";
 import { useRef } from "react";
+import ContactUs from "@/components/contactUs/ContactUs";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ const conferenceSectionRef = useRef(null);
       <HeroSection conferenceSectionRef={conferenceSectionRef}></HeroSection>
       <Conferance conferenceSectionRef={conferenceSectionRef}></Conferance>
       <Sponsor></Sponsor>
+      <ContactUs></ContactUs>
     </main>
   );
 }

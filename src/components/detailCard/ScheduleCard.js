@@ -1,8 +1,8 @@
 "use client"
 
 
-export default function ScheduleCard(organizer) {
-    const {intervals,day} = organizer.organizer;
+export default function ScheduleCard(detailsData) {
+    const {intervals,day} = detailsData.detailsData;
 
 
     return (

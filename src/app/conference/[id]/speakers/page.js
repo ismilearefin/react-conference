@@ -12,14 +12,16 @@ export default function Speakers({params}) {
       client,
       variables: { id },
     });
+    // Handle loading state
     if (loading) return (<CardLoading></CardLoading>);
-    if (error) return `Error: ${error.message}`;
-    console.log(data)
+    // Handle error state with a user-friendly message
+    if (error) return <div>Error loading data. Please try again later.</div>;
+    
     const speakers = data.conference.speakers
   return (
     <div className='grid gap-y-3 lg:gap-y-6 lg:mx-[52px] py-[24px]'>
       {
-        speakers.map((organizer,i) => <DetailCard key={i} organizer={organizer}></DetailCard>)
+        speakers.map((detailsData,i) => <DetailCard key={i} detailsData={detailsData}></DetailCard>)
       }
     </div>
   )
