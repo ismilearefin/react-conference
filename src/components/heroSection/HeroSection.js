@@ -33,15 +33,15 @@ export default function HeroSection({conferenceSectionRef}) {
         </div>
         
         <div className="w-full lg:basis-3/5 lg:ml-16">
-          <Link href='/'>
+          
             <p className="font-normal text-base lg:text-lg text-black pb-7 lg:h-[118px] ">
             Lorem uis diam turpis quam id fermentum.In quis diam turpis quam id fermentum..id fermentum.In quis diam turpis quam id fermentum.
             </p>
-            <div className=" lg:w-[293px] mt-2 lg:mt-6  bg-[#FFC93E] rounded-[30px] flex justify-center text-[#0A142F] text-lg font-medium">
+            <button className="w-full lg:w-[293px] mt-2 lg:mt-6  bg-[#FFC93E] rounded-[30px] flex justify-center items-center text-[#0A142F] text-lg font-medium">
             <p className="py-[16px] px-2">Buy Tickets</p>
             <Image src='/arrow-up-right.svg' alt="icon" width={20} height={20}/>
-            </div>
-            </Link>
+            </button>
+            
             {/* Scroll down button */}
           <div onClick={scrollToConferenceSection} className="relative min-h-full cursor-pointer">
             <div  className="hidden absolute z-10 right-[100px] bottom-[300px] lg:flex gap-2 flex-row-reverse origin-center -rotate-90">
@@ -54,13 +54,13 @@ export default function HeroSection({conferenceSectionRef}) {
         </div>
       </div>
       </div>
-      <Image className="absolute  top-9 lg:top-0  right-[-5px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
+      <Image className="absolute  top-0 right-[-5px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
 
       <div className="lg:basis-2/5 ml-2 lg:ml-9 relative">
-      <Image className="rounded-[50px] w-[330px] lg:w-[550px] pt-8 lg:pt-[145px]" src='/HeroImage.png' alt="Hero Image" width={550} height={550}></Image>
+      <Image className="rounded-[50px] lg:w-[550px] pt-8 lg:pt-[145px]" src='/HeroImage.png' alt="Hero Image" width={550} height={550}></Image>
       <Image className="absolute bottom-[-40px] right-[-20px] lg:bottom-[-10px] lg:left-[-40px] " src='/Star.svg' alt="star" width={100} height={100}></Image>
       </div>
-
+{/* Mobile device Only */}
       <div className="lg:hidden w-full flex flex-row-reverse justify-between mt-[64px]">
           <Image className="mt-[100px]" src='/Ornament.svg' alt="Ornament" width={100} height={100}/>
           <Image  src='/HeroImage2.png' alt="Hero Image 2" width={157} height={200}></Image>

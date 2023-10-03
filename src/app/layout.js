@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full bg-hero-bg bg-auto lg:bg-cover lg:bg-center bg-no-repeat">
+        <div className="w-full bg-hero-bg bg-auto bg-no-repeat lg:bg-cover lg:bg-center ">
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
