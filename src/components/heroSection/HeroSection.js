@@ -21,7 +21,7 @@ export default function HeroSection({conferenceSectionRef}) {
     <div className="w-full relative lg:w-[1552px] lg:pt-4 mx-[20px] lg:mx-[200px] lg:flex">
       <div className="lg:basis-3/5 relative">
         {/* Heading */}
-        <div className="relative mr-14 lg:mr-0 text-end text-[#111D5E] text-[48px] lg:text-[140px] font-bold leading-none">
+        <div className="relative mr-14 lg:mr-0 text-end text-[#111D5E] text-[48px] lg:text-[130px] font-bold leading-none">
           <Image className="absolute right-[120px] top-[-30px] w-[40px] lg:w-[85px] lg:right-[330px] lg:top-[-40px]" src='/reactStar.svg' alt="react star" width={85} height={85}></Image>
           <h1>React <br/>Conference</h1>
         </div>
@@ -45,7 +45,7 @@ export default function HeroSection({conferenceSectionRef}) {
             {/* Scroll down button */}
           <div onClick={scrollToConferenceSection} className="relative min-h-full cursor-pointer">
             <div  className="hidden absolute z-10 right-[100px] bottom-[300px] lg:flex gap-2 flex-row-reverse origin-center -rotate-90">
-            <p className="text-[#0A142F] text-sm font-normal">
+            <p className="text-[#0A142F] text-md ">
             Scroll Down
             </p>
             <Image className="animate-pulse origin-center rotate-90 " src='/downArrow.svg' alt="icon" width={16} height={16}/>

@@ -39,7 +39,7 @@ export default function ConferanceLayout({ children, params }) {
             {menu.map((item, i) => (
               <>
                 <Button key={i} id={id} name={item} path={pathname}></Button>
-                       {/* In mobile screen size */}
+                {/* In mobile screen size */}
                 {pathname === `/conference/${id}/${item}` && (
                   <div className="lg:hidden overflow-y-scroll scroll-m-1 border w-full h-[350px] lg:h-[670px] rounded-lg mb-4 lg:mb-[100px] bg-[#F9FAFB]">
                     {children}
@@ -48,7 +48,7 @@ export default function ConferanceLayout({ children, params }) {
               </>
             ))}
           </aside>
-        {/* For desktop view  */}
+          {/* For desktop view  */}
           <div className="hidden lg:static lg:block overflow-y-scroll scroll-m-1 border w-full h-[250px] lg:h-[670px] rounded-lg mb-[100px] bg-[#F9FAFB]">
             {children}
           </div>
