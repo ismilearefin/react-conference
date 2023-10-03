@@ -58,7 +58,7 @@ export default function HeroSection({conferenceSectionRef}) {
 
       <div className="lg:basis-2/5 ml-2 lg:ml-9 relative">
       <Image className="rounded-[50px] lg:w-[550px] pt-8 lg:pt-[145px]" src='/HeroImage.png' alt="Hero Image" width={550} height={550}></Image>
-      <Image className="absolute bottom-[-40px] right-[-20px] lg:bottom-[-10px] lg:left-[-40px] " src='/Star.svg' alt="star" width={100} height={100}></Image>
+      <Image className="absolute animate-spin bottom-[-40px] right-[-20px] lg:bottom-[-10px] lg:left-[-40px] " src='/Star.svg' alt="star" width={100} height={100}></Image>
       </div>
 {/* Mobile device Only */}
       <div className="lg:hidden w-full flex flex-row-reverse justify-between mt-[64px]">
