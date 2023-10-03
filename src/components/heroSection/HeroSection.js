@@ -54,7 +54,7 @@ export default function HeroSection({conferenceSectionRef}) {
         </div>
       </div>
       </div>
-      <Image className="absolute  top-0 right-[-5px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
+      <Image className="absolute  top-1 right-[-4px]" src='/DotLine.svg' alt="Line" width={940} height={832}></Image>
 
       <div className="lg:basis-2/5 ml-2 lg:ml-9 relative">
       <Image className="rounded-[50px] lg:w-[550px] pt-8 lg:pt-[145px]" src='/HeroImage.png' alt="Hero Image" width={550} height={550}></Image>
