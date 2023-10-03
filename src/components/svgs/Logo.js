@@ -1,6 +1,6 @@
 export default function Logo({ style }) {
   return (
-    <div>
+    <>
       <svg
         width={style?.width}
         height={style?.height}
@@ -31,6 +31,6 @@ export default function Logo({ style }) {
           />
         </g>
       </svg>
-    </div>
+    </>
   );
 }

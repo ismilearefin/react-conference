@@ -15,8 +15,10 @@ export default function ContactUs() {
     const message = form.message.value;
 
     console.log(fullname, email, subject, message);
+    // Remove all texts from the form
     form.reset();
     setSubmit(true);
+    // Navigate to success page
     router.push("/success");
   };
 
@@ -26,7 +28,9 @@ export default function ContactUs() {
         onSubmit={(e) => handleSubmit(e)}
         className="lg:m-8 w-full lg:w-[1320px] rounded-lg shadow-3xl flex flex-col px-3 lg:px-8 py-8 bg-white dark:bg-blue-500"
       >
-        <h1 className="text-center lg:text-left text-2xl lg:text-5xl ">Send a message</h1>
+        <h1 className="text-center lg:text-left text-2xl lg:text-5xl ">
+          Send a message
+        </h1>
 
         <label
           htmlFor="fullname"

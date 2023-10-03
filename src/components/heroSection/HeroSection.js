@@ -42,6 +42,7 @@ export default function HeroSection({conferenceSectionRef}) {
             <Image src='/arrow-up-right.svg' alt="icon" width={20} height={20}/>
             </div>
             </Link>
+            {/* Scroll down button */}
           <div onClick={scrollToConferenceSection} className="relative min-h-full cursor-pointer">
             <div  className="hidden absolute z-10 right-[100px] bottom-[300px] lg:flex gap-2 flex-row-reverse origin-center -rotate-90">
             <p className="text-[#0A142F] text-sm font-normal">
