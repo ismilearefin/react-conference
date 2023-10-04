@@ -9,7 +9,7 @@ export default function page() {
         {/* Add Confetti in success page */}
       <Confetti width={1920} height={1920}></Confetti>
       <div className="mb-8">
-      <h1 className="text-3xl font-bold mb-4">Successfully send your mail</h1>
+      <h1 className="text-3xl font-bold mb-4">Successfully send your email</h1>
       <Link href="/" className=" pointer">
         Go back
       </Link>

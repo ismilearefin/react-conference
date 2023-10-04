@@ -1,4 +1,4 @@
-# React Conference Project
+# React Conference Project [Link](https://react-conference-steel.vercel.app/)
 
 Welcome to the React Conference Project, a non-profit website with a beautiful UI design, mobile responsiveness, and various features. This project is built using Next.js, GraphQL (with Apollo Client), Tailwind CSS, and incorporates animations, a loading component, 404 not found page, contact form, Facebook, and WhatsApp messenger integration. It follows a production-level folder structure and includes important comments for code clarity and maintainability.
 
@@ -34,6 +34,8 @@ To get started with this project, follow these steps:
 The project follows a structured folder hierarchy to keep the code organized and maintainable. Here's an overview of the main directories:
 
 - `components/`: Reusable React components.
+- `app/conference`: Conference details page.
+- `app/success`: After successfully send email user will redirect this route.
 - `pages/`: Next.js page components.
 - `globals.css/`: Tailwind CSS configuration.
 - `graphql/`: GraphQL queries and Apollo Client.
