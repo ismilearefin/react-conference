@@ -2,6 +2,7 @@
 
 Welcome to the React Conference Project, a non-profit website with a beautiful UI design, mobile responsiveness, and various features. This project is built using Next.js, GraphQL (with Apollo Client), Tailwind CSS, and incorporates animations, a loading component, 404 not found page, contact form, Facebook, and WhatsApp messenger integration. It follows a production-level folder structure and includes important comments for code clarity and maintainability.
 
+![React-Conference](https://github.com/ismilearefin/react-conference/assets/92626163/a5598ee4-81e8-44cc-8db8-f5a71a40fa5b)
 
 ## Table of Contents
 - [Features](#features)
